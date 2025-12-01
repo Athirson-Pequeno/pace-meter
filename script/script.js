@@ -11,7 +11,7 @@ ReactDOM.render(
             <div class="flex h-full items-center md:hidden pr-4">
                 <img src="https://img.icons8.com/?size=30&id=36389&format=png&color=aec80d" />
             </div>
-            <ul class="flex h-full items-center hidden md:flex">
+            <ul class="hidden h-full items-center md:flex">
                 <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
                        transition-all duration-300 hover:border-[#aec80d]">
                     <a class="h-full flex items-center transition-all duration-300 
