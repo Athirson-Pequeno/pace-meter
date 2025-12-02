@@ -70,7 +70,7 @@ function renderMenu() {
 renderMenu();
 
 ReactDOM.render(
-    <footer class="w-full bg-[#1a1d1a] text-gray-300 py-12 border-t border-[#aec80d]/20">
+    <footer class="w-full bg-[#1a1d1a] text-gray-300 py-12 border-t border-[#aec80d]/20 bottom-0">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="hidden md:block">
                 <div class="flex items-center gap-2 mb-4">
