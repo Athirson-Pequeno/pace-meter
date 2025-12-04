@@ -1,4 +1,40 @@
+function MeuBotaoGlobal() {
+  function handleClick() {
+   window.location.href ="https://web.whatsapp.com/";
+  }
+
+  return (
+    <button
+      onClick={handleClick}
+      style={{
+        backgroundColor: "transparent",
+        border: "none",
+        cursor: "pointer",
+        position: "fixed",
+        zIndex: 9999,
+        bottom: "20px",
+        right: "20px",
+        padding: "10px"
+      }}
+    >
+      <img 
+        src="/src\images/whatsapp (2).png" 
+        alt="WhatsApp" 
+        width="50"
+      />
+    </button>
+  );
+}
+
+const locais = document.querySelectorAll(".react-botao");
+
+locais.forEach((el) => {
+  ReactDOM.render(<MeuBotaoGlobal />, el);
+});
+
+
 let menuAberto = false;
+
 
 function renderMenu() {
     ReactDOM.render(
@@ -129,4 +165,5 @@ ReactDOM.render(
     ,
     document.getElementById('footer')
 )
+
 
