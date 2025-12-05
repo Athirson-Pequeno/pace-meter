@@ -11,108 +11,97 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/babel" src="../script/script.js"></script>
+
+
 </head>
 
 <body class="font-mono bg-[#2b2a27] pt-20 min-h-screen flex flex-col">
-
-    <div class="react-botao"></div>
-
     <main class="flex-1">
         <div id="menu"></div>
-        <div class="relative w-full">
-            <div class="relative w-full">
-                <div id="form-area"></div>
+        <div class="max-w-lg mx-auto w-full px-4 pb-20">
+            <img src="/src/images/corredor.png" class="fixed top-0 left-0 w-screen h-screen object-cover object-center -z-10">
+
+            <select id="selecionarFormulario" class="w-full p-2 border rounded mb-6">
+
+                <option value="">Selecione uma opção...</option>
+                <option value="formAtendimento">Atendimento</option>
+                <option value="formParcerias">Contato para Parcerias</option>
+                <option value="formReclamacao">Reclamação ou Sugestão</option>
+                <option value="formContato">Dados para Contato</option>
+            </select>
+
+
+            <div id="formAtendimento" class="formulario hidden mb-10 p-6 border rounded-lg shadow-sm bg-[#1f1f1d]">
+                <h2 class="text-xl text-[#aec80d] font-semibold mb-4">Atendimento</h2>
+
+                <form class="space-y-4">
+                    <input type="text" placeholder="Seu nome" class="w-full p-2 border rounded">
+                    <input type="email" placeholder="Seu e-mail" class="w-full p-2 border rounded">
+                    <textarea placeholder="Descreva seu problema" class="w-full p-2 border rounded"></textarea>
+
+                    <button class="px-4 py-2 bg-green-600 text-white rounded">Enviar</button>
+                </form>
             </div>
 
-            <script type="text/babel">
+            <div id="formParcerias" class="formulario hidden mb-10 p-6 border rounded-lg shadow-sm bg-[#1f1f1d]">
+                <h2 class="text-xl text-[#aec80d] font-semibold mb-4">Contato para Parcerias</h2>
 
-                function App() {
-                    const [opcao, setOpcao] = React.useState("");
-                    const [formulario, setFormulario] = React.useState(null);
+                <form class="space-y-4">
+                    <input type="text" placeholder="Nome da empresa" class="w-full p-2 border rounded">
+                    <input type="email" placeholder="E-mail comercial" class="w-full p-2 border rounded">
+                    <textarea placeholder="Explique a proposta de parceria"
+                        class="w-full p-2 border rounded"></textarea>
 
-                    function abrirFormulario() {
-                        if (opcao === "") {
-                            setFormulario(null);
-                            return;
-                        }
-                        setFormulario(opcao);
-                    }
+                    <button class="px-4 py-2 bg-green-600 text-white rounded">Enviar Proposta</button>
+                </form>
+            </div>
 
-                    function renderFormulario() {
-                        switch (formulario) {
-                            case "atendimento":
-                                return (
-                                    <form className="space-y-4 mt-4">
-                                        <input type="text" placeholder="Seu nome" className="w-full p-2 border rounded" />
-                                        <input type="email" placeholder="Seu e-mail" className="w-full p-2 border rounded" />
-                                        <textarea placeholder="Descreva seu problema" className="w-full p-2 border rounded"></textarea>
-                                        <button className="px-4 py-2 bg-green-600 text-white rounded">Enviar</button>
-                                    </form>
-                                );
-                            case "parceria":
-                                return (
-                                    <form className="space-y-4 mt-4">
-                                        <input type="text" placeholder="Nome da empresa" className="w-full p-2 border rounded" />
-                                        <input type="email" placeholder="E-mail comercial" className="w-full p-2 border rounded" />
-                                        <textarea placeholder="Explique a proposta" className="w-full p-2 border rounded"></textarea>
-                                        <button className="px-4 py-2 bg-green-600 text-white rounded">Enviar Proposta</button>
-                                    </form>
-                                );
-                            case "reclamacao":
-                                return (
-                                    <form className="space-y-4 mt-4">
-                                        <input type="text" placeholder="Seu nome" className="w-full p-2 border rounded" />
-                                        <textarea placeholder="Digite sua reclamação" className="w-full p-2 border rounded"></textarea>
-                                        <button className="px-4 py-2 bg-green-600 text-white rounded">Enviar</button>
-                                    </form>
-                                );
-                            case "contato":
-                                return (
-                                    <form className="space-y-4 mt-4">
-                                        <input type="text" placeholder="Nome completo" className="w-full p-2 border rounded" />
-                                        <input type="tel" placeholder="Telefone" className="w-full p-2 border rounded" />
-                                        <input type="email" placeholder="E-mail" className="w-full p-2 border rounded" />
-                                        <textarea placeholder="Sua mensagem" className="w-full p-2 border rounded"></textarea>
-                                        <button className="px-4 py-2 bg-green-600 text-white rounded">Enviar</button>
-                                    </form>
-                                );
-                        }
-                    }
+            <div id="formReclamacao" class="formulario hidden mb-10 p-6 border rounded-lg shadow-sm bg-[#1f1f1d]">
+                <h2 class="text-xl text-[#aec80d] font-semibold mb-4">Reclamação ou Sugestão</h2>
 
-                    return (
-                        <div className="flex justify-center w-full mt-10">
-                            <div className="bg-black p-6 rounded-lg shadow-lg w-full max-w-md">
+                <form class="space-y-4">
+                    <input type="text" placeholder="Seu nome" class="w-full p-2 border rounded">
+                    <textarea placeholder="Digite sua reclamação ou sugestão"
+                        class="w-full p-2 border rounded"></textarea>
 
-                                <h2 className="text-xl font-bold text-center mb-4 text-[#aec80d]">
-                                    Fale Conosco
-                                </h2>
+                    <button class="px-4 py-2 bg-green-600 text-white rounded">Enviar</button>
+                </form>
+            </div>
 
-                                <select
-                                    className="w-full p-2 border rounded"
-                                    value={opcao}
-                                    onChange={(e) => {
-                                        setOpcao(e.target.value);
-                                        setFormulario(e.target.value);
-                                    }}
-                                >
-                                    <option value="">Selecione uma opção</option>
-                                    <option value="atendimento">Atendimento</option>
-                                    <option value="parceria">Parcerias</option>
-                                    <option value="reclamacao">Reclamação ou Sugestão</option>
-                                    <option value="contato">Dados para Contato</option>
-                                </select>
+            <div id="formContato" class="formulario hidden mb-10 p-6 border rounded-lg shadow-sm bg-[#1f1f1d]">
+                <h2 class="text-xl text-[#aec80d] font-semibold mb-4">Dados para Contato</h2>
 
-                                {renderFormulario()}
-                            </div>
-                        </div>
-                    );
-                }
+                <form class="space-y-4">
+                    <input type="text" placeholder="Nome completo" class="w-full p-2 border rounded">
+                    <input type="tel" placeholder="Telefone" class="w-full p-2 border rounded">
+                    <input type="email" placeholder="E-mail" class="w-full p-2 border rounded">
+                    <textarea placeholder="Escreva aqui sua mensagem" class="w-full p-2 border rounded"></textarea>
 
-                ReactDOM.createRoot(document.getElementById("form-area")).render(<App />);
-            </script>
+                    <button class="px-4 py-2 bg-green-600 text-white rounded">Enviar</button>
+                </form>
+            </div>
 
+        </div>
     </main>
+
+    <script>
+        const select = document.getElementById("selecionarFormulario");
+
+        select.addEventListener("change", function () {
+
+            document.querySelectorAll(".formulario").forEach(div => {
+                div.style.display = "none";
+            });
+
+            const valor = this.value;
+            if (valor) {
+                document.getElementById(valor).style.display = "block";
+            }
+        });
+    </script>
+
     <div id="footer"></div>
+
 </body>
 
 </html>
