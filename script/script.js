@@ -1,35 +1,35 @@
 function MeuBotaoGlobal() {
-  function handleClick() {
-   window.location.href ="https://web.whatsapp.com/";
-  }
+    function handleClick() {
+        window.location.href = "https://web.whatsapp.com/";
+    }
 
-  return (
-    <button
-      onClick={handleClick}
-      style={{
-        backgroundColor: "transparent",
-        border: "none",
-        cursor: "pointer",
-        position: "fixed",
-        zIndex: 9999,
-        bottom: "20px",
-        right: "20px",
-        padding: "10px"
-      }}
-    >
-      <img 
-        src="/src\images/whatsapp (2).png" 
-        alt="WhatsApp" 
-        width="50"
-      />
-    </button>
-  );
+    return (
+        <button
+            onClick={handleClick}
+            style={{
+                backgroundColor: "transparent",
+                border: "none",
+                cursor: "pointer",
+                position: "fixed",
+                zIndex: 9999,
+                bottom: "20px",
+                right: "20px",
+                padding: "10px"
+            }}
+        >
+            <img
+                src="/src\images/whatsapp (2).png"
+                alt="WhatsApp"
+                width="50"
+            />
+        </button>
+    );
 }
 
 const locais = document.querySelectorAll(".react-botao");
 
 locais.forEach((el) => {
-  ReactDOM.render(<MeuBotaoGlobal />, el);
+    ReactDOM.render(<MeuBotaoGlobal />, el);
 });
 
 
@@ -164,6 +164,22 @@ ReactDOM.render(
     </footer>
     ,
     document.getElementById('footer')
-)
+);
 
+function selecionarFormulario() {
+    const select = document.getElementById("selecionarFormulario");
+
+    const valor = select.value;
+
+    document.querySelectorAll(".formulario").forEach(div => {
+        div.style.display = "none";
+    });
+
+
+    if (valor) {
+        document.getElementById(valor).style.display = "block";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", selecionarFormulario);
 
