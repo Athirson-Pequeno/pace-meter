@@ -18,7 +18,7 @@ function MeuBotaoGlobal() {
             }}
         >
             <img
-                src="./sr/images/whatsapp (2).png"
+                src="../src/images/whatsapp (2).png"
                 alt="WhatsApp"
                 width="50"
             />
