@@ -18,7 +18,7 @@ function MeuBotaoGlobal() {
             }}
         >
             <img
-                src="./src/images/whatsapp (2).png"
+                src="./sr/images/whatsapp (2).png"
                 alt="WhatsApp"
                 width="50"
             />
@@ -40,7 +40,7 @@ function renderMenu() {
     ReactDOM.render(
         <div class="fixed flex w-full h-20 bg-[#1a1d1a] top-0 left-0 items-center justify-between shadow-lg z-50">
             <div>
-                <a href="/index.html" class="flex items-center py-2 pl-8 text-center gap-2 transition duration-300 hover:scale-110">
+                <a href="/pace-meter/" class="flex items-center py-2 pl-8 text-center gap-2 transition duration-300 hover:scale-110">
                     <img src="https://img.icons8.com/?size=40&id=813&format=png&color=aec80d" />
                     <h1 class="text-[#aec80d] font-bold md:text-3xl">PACE METER</h1>
                 </a>
