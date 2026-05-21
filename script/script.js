@@ -64,13 +64,13 @@ function renderMenu() {
                     }
                 >
                     <li class="p-4 text-[#aec80d] border-b border-[#aec80d]/20">
-                        <a href="/pages/sobre-nos.html">SOBRE NÓS</a>
+                        <a href="pace-meter/pages/sobre-nos.html">SOBRE NÓS</a>
                     </li>
                     <li class="p-4 text-[#aec80d] border-b border-[#aec80d]/20">
-                        <a href="/pages/nossos-precos.html">NOSSOS PREÇOS</a>
+                        <a href="pace-meter/pages/nossos-precos.html">NOSSOS PREÇOS</a>
                     </li>
                     <li class="p-4 text-[#aec80d]">
-                        <a href="/pages/fale-conosco.html">FALE CONOSCO</a>
+                        <a href="pace-meter/pages/fale-conosco.html">FALE CONOSCO</a>
                     </li>
                 </ul>
 
@@ -78,21 +78,21 @@ function renderMenu() {
                     <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
                            transition-all duration-300 hover:border-[#aec80d]">
                         <a class="h-full flex items-center transition-all duration-300 
-                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/sobre-nos.html">
+                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="pace-meter/pages/sobre-nos.html">
                             SOBRE NÓS
                         </a>
                     </li>
                     <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
                            transition-all duration-300 hover:border-[#aec80d]">
                         <a class="h-full flex items-center transition-all duration-300 
-                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/nossos-precos.html">
+                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="pace-meter/pages/nossos-precos.html">
                             NOSSOS PREÇOS
                         </a>
                     </li>
                     <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
                            transition-all duration-300 hover:border-[#aec80d]">
                         <a class="h-full flex items-center transition-all duration-300 
-                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/fale-conosco.html">
+                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="pace-meter/pages/fale-conosco.html">
                             FALE CONOSCO
                         </a>
                     </li>
@@ -123,17 +123,17 @@ ReactDOM.render(
                 <h2 class="text-[#aec80d] font-bold text-xl mb-4">Navegação</h2>
                 <ul class="flex flex-row md:block justify-between w-full md:w-auto md:justify-center">
                     <li class="flex items-center justify-center">
-                        <a href="/pages/sobre-nos.html" class="hover:text-[#aec80d] transition duration-300">
+                        <a href="pace-meter/pages/sobre-nos.html" class="hover:text-[#aec80d] transition duration-300">
                             Sobre nós
                         </a>
                     </li>
                     <li class="flex items-center justify-center">
-                        <a href="/pages/nossos-precos.html" class="hover:text-[#aec80d] transition duration-300">
+                        <a href="pace-meter/pages/nossos-precos.html" class="hover:text-[#aec80d] transition duration-300">
                             Nossos preços
                         </a>
                     </li>
                     <li class="flex items-center justify-center">
-                        <a href="/pages/fale-conosco.html" class="hover:text-[#aec80d] transition duration-300">
+                        <a href="pace-meter/pages/fale-conosco.html" class="hover:text-[#aec80d] transition duration-300">
                             Fale conosco
                         </a>
                     </li>
